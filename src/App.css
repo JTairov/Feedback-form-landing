@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+.App {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  
+  border-left: 8px solid #F8CECA;
+}
+
+
+.form,
+.main,
+.downloadContainer {
+  width: 50%;
+  padding: 50px;
+}
+
+.downloadContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downloadBlock {
+  max-width: 500px;
+}
+
+.form {
+  padding-top: 190px;
+}
+
+.main {
+  position: relative;
+  padding-top: 180px;
+  background-color: #FEE9E7;
+}
+
+
+
+.main__img {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  z-index: 5;
+}
+
+.AVS-logo {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.form > form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form__header,
+.downloadBlock__heading,
+.h3-heading {
+  font-size: 37px;
+  font-weight: 700;
+  color: rgba(24, 28, 71, 1);
+}
+
+.h3-heading {
+  font-size: 24px;
+}
+
+.form__text,
+.downloadBlock__text {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(24, 28, 71, 1);
+  margin-top: 10px;
+}
+
+
+.main__heading {
+	position: relative;
+	font-family: 'Roboto Mono', sans-serif;
+	font-size: 54px;
+	line-height: 63px;
+	color: rgba(24, 28, 71, 1);
+	font-weight: 900;
+	max-width: 585px;
+  z-index: 10;
+}
+
+.giveaway::before {
+  position: absolute;
+	content: '';
+	width: 318px;
+	height: 60px;
+	bottom: -15px;
+  left: -15px;
+  z-index: -1;
+
+	background-image: url('./img/banner-background.svg');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 100%;
+}
+
+.banner {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-image: url('./img/colored-dots.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.checkbox-error {
+  padding-left: 35px;
+}
+
+.errored {
+  border: 1px solid red !important;
+}
+
+.divider {
+  display: block;
+  border-top: 1px solid #DADADA ;
+  margin: 50px 0;
+}
+
+.links {
+  margin-top: 25px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.links__item {
+  max-width: 141px;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+
+.links__img {
+  width: 33px;
+  height: 33px;
+  margin-bottom: 14px;
+}
+
+.links__text {
+  position: relative;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.links__text span {
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .App {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main {
+    background: none;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 175px;
+  }
+
+  .downloadContainer {
+    width: 100%;
+  }
+
+  .main__heading {
+    max-width: 500px;
+    font-size: 46px;
+  }
+
+  .giveaway::before {
+    width: 300px;
+  }
+
+  .form {
+    padding-top: 100px;
+    height: fit-content;
+    width: 100%;
+  }
+
+  
+
+  .banner {
+    bottom: -52em;
+    left: 0;
+    top: auto;
+    right: auto;
+    width: 100%;
+  }
+
+  .main__img {
+    position: relative;
+    width: 100%;
+  } 
+}
+
+@media (max-width: 430px) {
+  .App {
+    border-left: none;
+    border-top: 8px solid #F8CECA;
+  }
+
+  .AVS-logo {
+    top: 25px;
+    left: 15px;
+  }
+
+  .main {
+    padding: 95px 15px 15px
+  }
+
+  .main__heading {
+    font-size: 25px;
+    line-height: 34px;
+  }
+
+  .form,
+  .downloadContainer {
+    padding: 37px 15px 50px;
+  }
+
+
+  .form__header,
+  .downloadBlock__heading,
+  .h3-heading {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(24, 28, 71, 1);
+  }
+
+  .banner {
+    bottom: -44em;
+  }
+
+  .giveaway::before {
+    width: 150px;
+    right: 0;
+    height: 26px;
+  }
+
+  .giveaway::before {
+    bottom: 0;
+    left: 0;
+  }
+}

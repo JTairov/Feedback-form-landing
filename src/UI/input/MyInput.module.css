@@ -1,0 +1,30 @@
+.inputBlock {
+	margin-top: 33px;
+}
+
+.label {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.text {
+	font-size: 15px;
+	font-weight: 700;
+	color: #241C15;
+	margin-bottom: 10px;
+}
+
+.input {
+	border: 1px solid #241C154D;
+	font-size: 18px;
+	color: #241C15;
+	padding: 15px 20px;
+	border-radius: 2px;
+}
+
+.input:focus {
+	outline: none;
+	box-shadow: 0 0 0 4px rgba(254, 146, 53, 0.2);
+	border: 1px solid #FE9235;
+}
